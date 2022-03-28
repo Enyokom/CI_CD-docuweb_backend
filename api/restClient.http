@@ -1,0 +1,58 @@
+POST http://localhost:3000/etapes HTTP/1.1
+content-type: application/json
+
+{
+    "name": "test etapes",
+    "descriptif": "Maintenance Aero"
+}
+###
+GET http://127.0.0.1:3000/etapes HTTP/1.1
+
+###
+DELETE  http://localhost:3000/etapes HTTP/1.1
+###
+PUT http://localhost:3000/etapes/3002 HTTP/1.1
+content-type: application/json
+
+{
+    "name": "etapes test modifié",
+    "descriptif": "operation corrective"
+}
+
+###
+GET http://localhost:3000/users HTTP/1.1
+###
+POST http://localhost:3000/users HTTP/1.1
+content-type: application/json
+
+{
+    "username": "Enyo",
+    "email": "docuweb@gmail.com",
+    "password": "Docuweb@vb72",
+    "role" : "admin"
+}
+
+###
+POST http://localhost:3000/login HTTP/1.1
+content-type: application/json
+
+{
+    "email": "docuweb@gmail.com",
+    "password": "Docuweb@vb72"
+}
+###
+DELETE  http://localhost:3000/users/621e2b783464710028a7d6c4 HTTP/1.1
+
+###
+
+POST http://localhost:3000/users HTTP/1.1
+content-type: application/json
+
+{
+    "username": "docu",
+    "email": "docu-web@gmail.com",
+    "password": "Docuweb@vb72",
+    "role" : "admin"
+}
+
+###
