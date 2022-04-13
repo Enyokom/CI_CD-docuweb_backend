@@ -1,0 +1,26 @@
+image: node: 16
+  cache:
+    paths
+     - node-modules/
+stages:
+   - build
+   - tests
+   - deploy
+build:
+    stage: build
+    scripts:
+      - next build
+      - next export
+    artifacts:
+      paths:
+        - out
+  tests: 
+    stage: tests
+    script: 
+      - yarn global add jest
+      - jest
+ coverage:
+    stage: tests
+    script: 
+      - yarn global add jest
+      - jest --coverage
