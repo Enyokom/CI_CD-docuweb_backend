@@ -9,6 +9,16 @@ content-type: application/json
 GET http://127.0.0.1:3000/etapes HTTP/1.1
 
 ###
+
+POST http://localhost:3000/etapes HTTP/1.1
+content-type: application/json
+
+{
+    "name": "etape4",
+    "descriptif": "moteur Hiller UH-12 Raven."
+}
+
+###
 DELETE  http://localhost:3000/etapes HTTP/1.1
 ###
 PUT http://localhost:3000/etapes/3002 HTTP/1.1
@@ -18,6 +28,8 @@ content-type: application/json
     "name": "etapes test modifié",
     "descriptif": "operation corrective"
 }
+
+
 
 ###
 GET http://localhost:3000/users HTTP/1.1
